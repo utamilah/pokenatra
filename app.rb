@@ -8,6 +8,7 @@ require_relative 'db/connection'
 # Load models
 require_relative 'models/pokemon'
 
+# Routes Below #
 get '/' do
   @pokemon = Pokemon.all
   erb :"pokemon/index"
