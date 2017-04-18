@@ -7,6 +7,15 @@
   src: url(../fonts/PokemonSolid.ttf) format("truetype");
 }
 
+img {
+  width: 200px;
+}
+
+.pokemon img {
+  width: 200px;
+  float: right;
+}
+
 a, p, h2, h3 {
   color: rgb(215, 215, 0);
   text-shadow: rgb(35, 75, 180) 3px 3px 1px;
@@ -23,6 +32,10 @@ body {
   font-family: "Pokemon", monospace;
   letter-spacing: .25em;
   font-size: 200%;
+}
+
+a {
+  padding: 20px;
 }
 
 a:hover {
@@ -51,6 +64,7 @@ a:hover {
   border-left-color: rgba(255, 0, 0, .5);
   border-right-color: rgba(225, 225, 225, .5);
   border-bottom-color: rgba(225, 225, 225, .5);
+  padding: 40px;
 }
 
 @keyframes pulse {
@@ -70,4 +84,33 @@ a:hover {
     text-shadow: 4px 4px 3px rgba(255, 0, 0, .3);
     background-color: rgba(0, 0, 0, .1);
   }
+}
+
+form {
+  width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+form div {
+  margin-top: 30px;
+}
+
+form .button {
+  text-align: center;
+}
+
+.button_delete {
+  text-align: center;
+  padding: 0;
+}
+
+form label {
+  display: inline-block;
+  text-align: right;
+  width: 300px;
+}
+
+form input {
+  height: 30px;
 }
