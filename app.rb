@@ -7,6 +7,7 @@ require_relative 'db/connection'
 
 # Load models
 require_relative 'models/pokemon'
+require_relative 'models/trainer'
 
 # Routes Below #
 get '/' do
