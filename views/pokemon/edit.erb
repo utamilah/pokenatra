@@ -1,19 +1,25 @@
-<form action="/pokemon/<%= @pokemon.id %>" method="post">
-  <input type="hidden" name="method" value="put">
+<p><a href="/">All Pokemon</a></p>
+<section class="wrapper">
+  <form action="/pokemon/<%= @pokemon.id %>" method="post">
+    <input type="hidden" name="_method" value="put">
 
-  <label for="pokemon[name]">Name:</label>
-  <input name="pokemon[name]" value="<%= @pokemon.name %>">
+    <label for="pokemon[name]">Name:</label>
+    <input name="pokemon[name]" value="<%= @pokemon.name %>">
 
-  <label for="pokemon[img_url]">Photo:</label>
-  <input name="pokemon[img_url]" value="<%= @pokemon.img_url %>">
+    <label for="pokemon[img_url]">Photo:</label>
+    <input name="pokemon[img_url]" value="<%= @pokemon.img_url %>">
 
-  <label for="pokemon[poke_type]">Type:</label>
-  <input name="pokemon[poke_type]" value="<%= @pokemon.poke_type %>">
+    <label for="pokemon[poke_type]">Type:</label>
+    <input name="pokemon[poke_type]" value="<%= @pokemon.poke_type %>">
 
-  <input type="submit" value="Create">
-</form>
+    <label for="pokemon[cp]">Combat Power:</label>
+    <input name="pokemon[cp]" value="<%= @pokemon.cp %>">
 
-<form action="/pokemon/<%= @pokemon.id %>" method="post">
-  <input type="hidden" name="_method" value="delete">
-  <input class="button-delete" type="submit" value="Delete">
-</form>
+    <input type="submit" value="Update">
+  </form>
+
+  <form action="/pokemon/<%= @pokemon.id %>" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <input class="button-delete" type="submit" value="Delete">
+  </form>
+</section>

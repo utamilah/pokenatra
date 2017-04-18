@@ -1,5 +1,6 @@
 <h2>Pokedex</h2>
 <% @pokemon.each do |pokemon| %>
+  <img src="<%= pokemon.img_url %>" alt="">
   <a href="/pokemon/<%= pokemon.id %>"><p><%= pokemon.name %></p></a>
 <% end %>
 
