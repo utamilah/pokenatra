@@ -1,0 +1,30 @@
+<p><a href="/trainer">All Trainers</a></p>
+<div class="pokemon">
+  <form action="/trainer/<%= @trainer.id %>" method="post">
+    <input type="hidden" name="_method" value="put">
+
+    <div>
+      <label for="trainer[name]">Name:</label>
+      <input name="trainer[name]" value="<%= @trainer.name %>">
+    </div>
+
+    <div>
+      <label for="trainer[img_url]">Photo:</label>
+      <input name="trainer[img_url]" value="<%= @trainer.img_url %>">
+    </div>
+
+    <div>
+      <label for="trainer[level]">Type:</label>
+      <input name="trainer[level]" value="<%= @trainer.level %>">
+    </div>
+
+    <div class="button">
+      <input type="submit" value="Update">
+    </div>
+  </form>
+
+    <form class="button_delete" action="/trainer/<%= @trainer.id %>" method="post">
+      <input type="hidden" name="_method" value="delete">
+      <input class="button-delete" type="submit" value="Delete">
+    </form>
+</div>
