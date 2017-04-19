@@ -12,7 +12,7 @@
 <div class="pokemon">
   <h2>Trainer:</h2>
   <% if @pokemon.trainer_id != nil %>
-    <%= @pokemon.trainer.name %>
+    <p>Name: <a href="/trainer"><%= @pokemon.trainer.name %></a></p>
   <% else %>
     <p>This pokemon is a free agent</p>
   <% end %>

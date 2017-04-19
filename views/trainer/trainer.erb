@@ -10,6 +10,6 @@
 <div class="pokemon">
   <h2>Pokémon:</h2>
   <% @trainer.pokemons.each do |pokemon| %>
-    <p>Name: <a href="/pokemon/<%= pokemon.id %>"><%= pokemon.name %></a></p>
+    <p><a href="/pokemon/<%= pokemon.id %>"><%= pokemon.name %></a></p>
   <% end %>
 </div>
