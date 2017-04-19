@@ -1,0 +1,15 @@
+<p><a href="/trainer">« View All Trainers</a></p>
+<div class="pokemon">
+  <!-- Image First-->
+  <p><img src="<%= @trainer.img_url %>"></p>
+  <p>Name: <%= @trainer.name %></p>
+  <p>Level: <%= @trainer.level %></p>
+  <a href="/trainer/<%= @trainer.id %>/edit">Edit</a>
+</div>
+
+<div class="pokemon">
+  <h2>Pokémon:</h2>
+  <% @trainer.pokemons.each do |pokemon| %>
+    <p>Name: <a href="/pokemon/<%= pokemon.id %>"><%= pokemon.name %></a></p>
+  <% end %>
+</div>

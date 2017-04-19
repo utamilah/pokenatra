@@ -1,0 +1,10 @@
+<a href="/">« Home</a>
+<h1>Trainers</h1>
+<section class="containareon">
+  <p><a href="/trainer/new">Add New</a></p>
+
+  <% @trainer.each do |trainer| %>
+    <img src="<%= trainer.img_url %>" alt="">
+    <p><a href="/trainer/<%= trainer.id %>"><%= trainer.name %></a></p>
+  <% end %>
+</section>
