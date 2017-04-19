@@ -5,5 +5,15 @@
   <p>Name: <%= @pokemon.name %></p>
   <p>Type: <%= @pokemon.poke_type %></p>
   <p>Combat Power: <%= @pokemon.cp %></p>
+  <p>Trainer: <%= @pokemon.trainer_id %></p>
   <a href="/pokemon/<%= @pokemon.id %>/edit">Edit</a>
+</div>
+
+<div class="pokemon">
+  <h2>Trainer:</h2>
+  <% if @pokemon.trainer_id != nil %>
+    <%= @pokemon.trainer.name %>
+  <% else %>
+    <p>This pokemon is a free agent</p>
+  <% end %>
 </div>
